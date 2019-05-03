@@ -84,5 +84,5 @@ for d in list_dirs:
                 writer.writerow({'userid': userid, 'username': username, 'fullname': full_name, 'message': row['message'], 'date': row['date']})
 
 endTime = datetime.datetime.now()
-print("started at: {0} ended at: {}".format(startTime,endTime)) 
+print("started at: {0} ended at: {1}".format(startTime,endTime)) 
 
