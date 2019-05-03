@@ -21,7 +21,7 @@ print("ENDGAME - INSTRAGRAM DIRECT MESSAGES DUMPER")
 
 print("thread list generating ...\n")
 
-os.system('python threads.py -u {0} -p {1} > threads'.format(args.username,args.password))
+os.system('python threads.py -u {0} -p {1} > listthreads'.format(args.username,args.password))
 print("thread list generated\n")
 
 list_dirs = os.listdir("./output/")
