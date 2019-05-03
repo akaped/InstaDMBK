@@ -1,32 +1,22 @@
 # backup-direct-messages
 An easy way to backup all of your Instagram direct messages in an Instagram direct thread.
+This is partly the work of https://github.com/ahmdrz. 
+I've cloned his repo, modified it to fullfill my needs and then committed to my github. 
+Please check-out the original repo: https://github.com/instautils/backup-direct-messages
 
-### Only Backup
+### Backup everything in DM and generate clean CSV files with username, full name and proper date time.
 
-This program will save all of your messages in `output/dump_file.csv` directory and download all of thread media in `output`.
+This program will save all of your messages in `output/thread_name/results.csv` directory and download all of thread media in `output`.
 
 ```bash
-  python main.py -u <username> -p <password> -t <thread-title>
+  python automator.py -u <username> -p <password>
 ```
 
-CSV headers are :
+results.csv headers are :
 
 1. UserID
-2. Message
-3. ItemID
-4. Timestamp
+2. Username
+3. Full Name
+4. Message
+5. Date Time
 
-### Backup and clean
-
-```bash
-  python main.py -u <username> -p <password> -t <thread-title> --remove True
-```
-
-##### What is `thread-title` ?
-
-Every thread has title.
-When you are texting to your friend in Instagram direct , You will see your friend's username in title (header). That is `thread-title`.
-
-##### Debug mode
-
-Use `--debug True` to see logs in stdout. Use `--log-file` to write logs into specific file.
